@@ -45,11 +45,13 @@ body{
     height: 12px;
 }
 .nomePasta {
-    background-color: rgb(94, 94, 94);
+    background-color: rgb(73, 73, 73);
     display: inline-flex;
     flex-direction: row;
     width: 25%;
     font-size: 14px;
+    justify-content: center;
+    color: darkgray;
 }
 #editorHTML { 
     display: inline-flex;
