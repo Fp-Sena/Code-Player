@@ -69,10 +69,11 @@ body{
     width: 25%;
     height:670px;
 }
-#Output { 
+#output { 
+    background-color: rgb(31, 31, 31);
     color: red;
-    font-size: 28px;
     display: inline-flex;
+    font-size: 28px;
     width: 25%;
     height:670px;
 }
