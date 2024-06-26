@@ -12,54 +12,115 @@ var nomePastaCSS = document.getElementById('nomePastaCSS');
 var nomePastaJS = document.getElementById('nomePastaJS');
 var nomePastaOutput = document.getElementById("nomePastaOutput");
 
-var contHTML = 0;
-var contCSS = 0;
-var contJS = 0;
-var contOutput = 0;
-
-//true false
+var contHTML = true;
+var contCSS = true;
+var contJS = true;
+var contOutput = true;
+var contGeral = 4;
 
 botoes[0].addEventListener('click', function(){
-    if(contHTML%2==0){
-        editorHTML0.remove();
-        nomePastaHTML.remove();
+    if(contHTML==true){
+        nomePastaHTML.style.display = "none";
+        editorHTML0.style.display = "none" 
+        contHTML=false;
+        contGeral--;
     }
     else{
-        tela.appendChild(editorHTML0);
-        tela.appendChild(nomePastaHTML);
+        nomePastaHTML.style.display = "inline-flex";
+        editorHTML0.style.display = "inline-flex";
+        contHTML=true;
+        contGeral++;
     }
-    contHTML++;
 })
 botoes[1].addEventListener('click', function(){
-    if(contCSS%2==0){
-        editorCSS0.remove();
-        nomePastaCSS.remove();
+    if(contCSS==true){
+        nomePastaCSS.style.display = "none";
+        editorCSS0.style.display = "none";
+        contCSS=false;
+        contGeral--;
     }
     else{
-        tela.appendChild(editorCSS0);
-        tela.appendChild(nomePastaCSS);
+        nomePastaCSS.style.display = "inline-flex";
+        editorCSS0.style.display = "inline-flex";
+        contCSS=true;
+        contGeral++;
     }
-    contCSS++;
 });
 botoes[2].addEventListener('click', function(){
-    if(contJS%2==0){
-        editorJS0.remove();
-        nomePastaJS.remove();
+    if(contJS==true){
+        nomePastaJS.style.display = "none";
+        editorJS0.style.display = "none";
+        contJS=false;
+        contGeral--;
     }
     else{
-        tela.appendChild(editorJS0);
-        tela.appendChild(nomePastaJS);
+        nomePastaJS.style.display = "inline-flex";
+        editorJS0.style.display = "inline-flex";
+        contJS=true;
+        contGeral++;
     }
-    contJS++;
 });
 botoes[3].addEventListener('click', function(){
-    if(contOutput%2==0){
-        output.remove();
-        nomePastaOutput.remove();
+    if(contOutput==true){
+        nomePastaOutput.style.display = "none";
+        output.style.display = "none";
+        contOutput=false;
+        contGeral--;
     }
     else{
-        tela.appendChild(output);
-        tela.appendChild(nomePastaOutput);
+        nomePastaOutput.style.display = "inline-flex";
+        output.style.display = "inline-flex";
+        contOutput=true;
+        contGeral++;
     }
-    contOutput++;
 })
+function PreenchendoEspacoEditores(){
+    if(contGeral==4){
+        editorHTML0.style.width = "25%";
+        editorCSS0.style.width = "25%";
+        editorJS0.style.width = "25%";
+        output.style.width = "25%";
+
+        nomePastaHTML.style.width = "24.89%";
+        nomePastaCSS.style.width = "24.89%";
+        nomePastaJS.style.width = "24.89%";
+        nomePastaOutput.style.width = "24.89%";
+    }
+    else if(contGeral==3){
+        editorHTML0.style.width = "33.33%";
+        editorCSS0.style.width = "33.33%";
+        editorJS0.style.width = "33.33%";
+        output.style.width = "33.33%";
+
+        nomePastaHTML.style.width = "33.2%";
+        nomePastaCSS.style.width = "33.2%";
+        nomePastaJS.style.width = "33.2%";
+        nomePastaOutput.style.width = "33.2%";
+    }
+    else if(contGeral==2){
+        editorHTML0.style.width = "50%";
+        editorCSS0.style.width = "50%";
+        editorJS0.style.width = "50%";
+        output.style.width = "50%";
+
+        nomePastaHTML.style.width = "49.8%";
+        nomePastaCSS.style.width = "49.8%";
+        nomePastaJS.style.width = "49.8%";
+        nomePastaOutput.style.width = "49.8%";
+    }
+    else if(contGeral==1){
+        editorHTML0.style.width = "100%";
+        editorCSS0.style.width = "100%";
+        editorJS0.style.width = "100%";
+        output.style.width = "100%";
+
+        nomePastaHTML.style.width = "100%";
+        nomePastaCSS.style.width = "100%";
+        nomePastaJS.style.width = "100%";
+        nomePastaOutput.style.width = "100%";
+    }
+}
+botoes[0].addEventListener('click', PreenchendoEspacoEditores);
+botoes[1].addEventListener('click', PreenchendoEspacoEditores);
+botoes[2].addEventListener('click', PreenchendoEspacoEditores);
+botoes[3].addEventListener('click', PreenchendoEspacoEditores);
