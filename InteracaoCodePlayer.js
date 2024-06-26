@@ -17,6 +17,8 @@ var contCSS = 0;
 var contJS = 0;
 var contOutput = 0;
 
+//true false
+
 botoes[0].addEventListener('click', function(){
     if(contHTML%2==0){
         editorHTML0.remove();

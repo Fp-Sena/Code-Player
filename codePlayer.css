@@ -6,7 +6,7 @@
 }
 #cabeca {
     display: inline-block;
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     color: darkgrey;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
@@ -34,40 +34,43 @@
 }
 #player {
     display: block;
-    flex-direction: row;
     font-size: 0px;
-    height: 88%;
+    height: 92%;
     width: 100%;
 }
 #nomesPastas {
     display: block;
     width: 100%;
-    height: 12px;
+    height: 2.98%;
 }
 .nomePasta {
     background-color: rgb(73, 73, 73);
     display: inline-flex;
     flex-direction: row;
-    width: 25%;
+    width: 24.89%;
     font-size: 14px;
     justify-content: center;
     color: darkgray;
+    border: 1px solid black;
+}
+#editores {
+   display: flex;
+   height: 97%;
 }
 #editorHTML { 
     display: inline-flex;
-    margin-top: 4px;
     width: 25%;
-    height:670px;
+    border: 1px solid black;
 }
 #editorCSS { 
     display: inline-flex;
     width: 25%;
-    height:670px;
+    border: 1px solid black;
 }
 #editorJS { 
     display: inline-flex;
     width: 25%;
-    height:670px;
+    border: 1px solid black;
 }
 #output { 
     background-color: rgb(31, 31, 31);
@@ -75,5 +78,5 @@
     display: inline-flex;
     font-size: 28px;
     width: 25%;
-    height:670px;
+    border: 1px solid black;
 }
