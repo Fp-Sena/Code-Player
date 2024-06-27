@@ -81,10 +81,10 @@ function PreenchendoEspacoEditores(){
         editorJS0.style.width = "25%";
         output.style.width = "25%";
 
-        nomePastaHTML.style.width = "24.89%";
-        nomePastaCSS.style.width = "24.89%";
-        nomePastaJS.style.width = "24.89%";
-        nomePastaOutput.style.width = "24.89%";
+        nomePastaHTML.style.width = "25%";
+        nomePastaCSS.style.width = "25%";
+        nomePastaJS.style.width = "25%";
+        nomePastaOutput.style.width = "25%";
     }
     else if(contGeral==3){
         editorHTML0.style.width = "33.33%";
@@ -92,10 +92,10 @@ function PreenchendoEspacoEditores(){
         editorJS0.style.width = "33.33%";
         output.style.width = "33.33%";
 
-        nomePastaHTML.style.width = "33.2%";
-        nomePastaCSS.style.width = "33.2%";
-        nomePastaJS.style.width = "33.2%";
-        nomePastaOutput.style.width = "33.2%";
+        nomePastaHTML.style.width = "33.33%";
+        nomePastaCSS.style.width = "33.33%";
+        nomePastaJS.style.width = "33.33%";
+        nomePastaOutput.style.width = "33.33%";
     }
     else if(contGeral==2){
         editorHTML0.style.width = "50%";
@@ -103,10 +103,10 @@ function PreenchendoEspacoEditores(){
         editorJS0.style.width = "50%";
         output.style.width = "50%";
 
-        nomePastaHTML.style.width = "49.8%";
-        nomePastaCSS.style.width = "49.8%";
-        nomePastaJS.style.width = "49.8%";
-        nomePastaOutput.style.width = "49.8%";
+        nomePastaHTML.style.width = "50%";
+        nomePastaCSS.style.width = "50%";
+        nomePastaJS.style.width = "50%";
+        nomePastaOutput.style.width = "50%";
     }
     else if(contGeral==1){
         editorHTML0.style.width = "100%";
