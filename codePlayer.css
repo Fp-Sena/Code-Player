@@ -37,6 +37,7 @@ body{
 }
 #player {
     display: block;
+    background-color: black;
     font-size: 0px;
     height: 92%;
     width: 100%;
