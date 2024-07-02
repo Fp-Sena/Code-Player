@@ -77,10 +77,9 @@ body{
     border: 1px solid black;
 }
 #output { 
-    background-color: rgb(31, 31, 31);
-    color: red;
+    background-color: white;
+    color: green;
     display: inline-flex;
-    font-size: 28px;
     width: 25%;
     border: 1px solid black;
 }
