@@ -127,13 +127,13 @@ botoes[3].addEventListener('click', PreenchendoEspacoEditores);
 
 
 
-//-----------------vvvvvvvvvvvvvvvvvvvvvvvvvv-----------------------//
+//--------------------vvvvvvvvvvvvvvvvvvvvvvvvvv---------------------//
 var textoHTML = '';
 
 editorHTML0.addEventListener('input', function(){
     textoHTML=editorHTML0.textContent;
 
-    alert(eval(new String(textoHTML)));
+    console.log(textoHTML);
 })
 
 //------------------^^^^^^^^^^^^^^^^^^^^^^^^-----------------------//
