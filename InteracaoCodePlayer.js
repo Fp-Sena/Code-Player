@@ -18,8 +18,12 @@ var contJS = true;
 var contOutput = true;
 var contGeral = 4;
 
-var regex = /<[^>]*>(.*?)<\/[^>]*>/g;
+var regexHtml = /<[^>]*>(.*?)<\/[^>]*>/g;
+var regexCss = /([a-zA-Z0-9\s\.\#\:\[\]\=\-\_]+)\s*\{\s*([a-zA-Z\-]+\s*\:\s*[^;]+;\s*)+\s*\}/g;
+var regexJs = /\b(var|let|const|function|if|else|for|while|return|=>|{|}|\[|\]|\(|\)|\b\d+\b|"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`|===|!==|==|!=|=|\+\+|--|\+|-|\*|\/)\b/g;
 var textoHtml;
+var textoCss;
+var textoJs;
 var texto;
 
 botoes[0].addEventListener('click', function(){
@@ -131,7 +135,25 @@ botoes[3].addEventListener('click', PreenchendoEspacoEditores);
 
 editorHTML0.addEventListener('input', function(){
     texto = editorHTML0.textContent;
-    while((textoHtml = regex.exec(texto)) !== null){
+    while((textoHtml = regexHtml.exec(texto)) !== null){
+        //---------------vvv-------------
         alert(textoHtml);
+        //---------------^^^-------------
+    }
+})
+editorCSS0.addEventListener('input', function(){
+    texto = editorCSS0.textContent;
+    while((textoCss = regexCss.exec(texto)) !== null){
+        //---------------vvv-------------
+        alert(textoCss);
+        //---------------^^^-------------
+    }
+})
+editorJS0.addEventListener('input', function(){
+    texto = editorJS0.textContent;
+    while((textoJs = regexJs.exec(texto)) !== null){
+        //---------------vvv-------------
+        alert(textoJs);
+        //---------------^^^-------------
     }
 })
