@@ -18,6 +18,10 @@ var contJS = true;
 var contOutput = true;
 var contGeral = 4;
 
+var regex = /<[^>]*>(.*?)<\/[^>]*>/g;
+var textoHtml;
+var texto;
+
 botoes[0].addEventListener('click', function(){
     if(contHTML==true){
         nomePastaHTML.style.display = "none";
@@ -125,15 +129,9 @@ botoes[1].addEventListener('click', PreenchendoEspacoEditores);
 botoes[2].addEventListener('click', PreenchendoEspacoEditores);
 botoes[3].addEventListener('click', PreenchendoEspacoEditores);
 
-
-
-//--------------------vvvvvvvvvvvvvvvvvvvvvvvvvv---------------------//
-var textoHTML = '';
-
 editorHTML0.addEventListener('input', function(){
-    textoHTML=editorHTML0.textContent;
-
-    console.log(textoHTML);
+    texto = editorHTML0.textContent;
+    while((textoHtml = regex.exec(texto)) !== null){
+        alert(textoHtml);
+    }
 })
-
-//------------------^^^^^^^^^^^^^^^^^^^^^^^^-----------------------//
