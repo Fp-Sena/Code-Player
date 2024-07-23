@@ -1,11 +1,11 @@
-var editorHTML = ace.edit("editorHTML");
-var editorCSS = ace.edit("editorCSS");
-var editorJS = ace.edit("editorJS");
+var editorHtml = ace.edit("editorHTML");
+var editorCss = ace.edit("editorCSS");
+var editorJs = ace.edit("editorJS");
 
-editorHTML.setTheme("ace/theme/monokai");
-editorCSS.setTheme("ace/theme/monokai");
-editorJS.setTheme("ace/theme/monokai");
+editorHtml.setTheme("ace/theme/monokai");
+editorCss.setTheme("ace/theme/monokai");
+editorJs.setTheme("ace/theme/monokai");
 
-editorHTML.session.setMode("ace/mode/html");
-editorCSS.session.setMode("ace/mode/css");
-editorJS.session.setMode("ace/mode/javascript");
+editorHtml.session.setMode("ace/mode/html");
+editorCss.session.setMode("ace/mode/css");
+editorJs.session.setMode("ace/mode/javascript");

@@ -18,13 +18,9 @@ var contJS = true;
 var contOutput = true;
 var contGeral = 4;
 
-var regexHtml = /<[^>]*>(.*?)<\/[^>]*>/g;
-var regexCss = /([a-zA-Z0-9\s\.\#\:\[\]\=\-\_]+)\s*\{\s*([a-zA-Z\-]+\s*\:\s*[^;]+;\s*)+\s*\}/g;
-var regexJs = /\b(var|let|const|function|if|else|for|while|return|=>|{|}|\[|\]|\(|\)|\b\d+\b|"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`|===|!==|==|!=|=|\+\+|--|\+|-|\*|\/)\b/g;
 var textoHtml;
 var textoCss;
 var textoJs;
-var texto;
 
 botoes[0].addEventListener('click', function(){
     if(contHTML==true){
@@ -134,26 +130,14 @@ botoes[2].addEventListener('click', PreenchendoEspacoEditores);
 botoes[3].addEventListener('click', PreenchendoEspacoEditores);
 
 editorHTML0.addEventListener('input', function(){
-    texto = editorHTML0.textContent;
-    while((textoHtml = regexHtml.exec(texto)) !== null){
-        //---------------vvv-------------
-        alert(textoHtml);
-        //---------------^^^-------------
-    }
+    textoHtml = editorHtml.getValue();
+    console.log(textoHtml);
 })
 editorCSS0.addEventListener('input', function(){
-    texto = editorCSS0.textContent;
-    while((textoCss = regexCss.exec(texto)) !== null){
-        //---------------vvv-------------
-        alert(textoCss);
-        //---------------^^^-------------
-    }
+    textoCss = editorCss.getValue();
+    console.log(textoCss);
 })
 editorJS0.addEventListener('input', function(){
-    texto = editorJS0.textContent;
-    while((textoJs = regexJs.exec(texto)) !== null){
-        //---------------vvv-------------
-        alert(textoJs);
-        //---------------^^^-------------
-    }
+    textoJs = editorJs.getValue();
+    console.log(textoJs);
 })
