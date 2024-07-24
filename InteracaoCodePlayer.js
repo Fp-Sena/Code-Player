@@ -141,3 +141,12 @@ editorJS0.addEventListener('input', function(){
     textoJs = editorJs.getValue();
     console.log(textoJs);
 })
+
+
+//----------------------------vvvvvvvvvvvvvvvvvv-----------------------------
+
+var iframe = document.getElementById('iframe');
+
+iframe.style.backgroundColor = "red";
+
+//----------------------------^^^^^^^^^^^^^^^^^^-----------------------------
