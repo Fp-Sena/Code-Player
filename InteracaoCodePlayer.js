@@ -129,12 +129,18 @@ botoes[1].addEventListener('click', PreenchendoEspacoEditores);
 botoes[2].addEventListener('click', PreenchendoEspacoEditores);
 botoes[3].addEventListener('click', PreenchendoEspacoEditores);
 
+textoHtml = editorHtml.getValue();
+textoCss = editorCss.getValue();
+textoJs = editorJs.getValue();
+
 editorHTML0.addEventListener('input', function(){
     textoHtml = editorHtml.getValue();
+    iframe.srcdoc = textoHtml;
     console.log(textoHtml);
 })
 editorCSS0.addEventListener('input', function(){
     textoCss = editorCss.getValue();
+    iframe.style = textoCss;
     console.log(textoCss);
 })
 editorJS0.addEventListener('input', function(){
@@ -147,6 +153,6 @@ editorJS0.addEventListener('input', function(){
 
 var iframe = document.getElementById('iframe');
 
-iframe.style.backgroundColor = "red";
-
+iframe.srcdoc = textoHtml;
+iframe.srcdoc.style = textoCss;
 //----------------------------^^^^^^^^^^^^^^^^^^-----------------------------
