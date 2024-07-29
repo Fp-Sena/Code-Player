@@ -154,5 +154,6 @@ editorJS0.addEventListener('input', function(){
 var iframe = document.getElementById('iframe');
 
 iframe.srcdoc = textoHtml;
-iframe.srcdoc.style = textoCss;
+iframe.style = textoCss;
+
 //----------------------------^^^^^^^^^^^^^^^^^^-----------------------------
