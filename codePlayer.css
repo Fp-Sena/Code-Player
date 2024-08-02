@@ -62,16 +62,19 @@ body{
    height: 97%;
 }
 #editorHTML { 
+    font-size: 14px;
     display: inline-flex;
     width: 25%;
     border: 1px solid black;
 }
 #editorCSS { 
+    font-size: 14px;
     display: inline-flex;
     width: 25%;
     border: 1px solid black;
 }
 #editorJS { 
+    font-size: 14px;
     display: inline-flex;
     width: 25%;
     border: 1px solid black;
