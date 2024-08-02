@@ -76,9 +76,7 @@ body{
     width: 25%;
     border: 1px solid black;
 }
-#output { 
-    background-color: white;
-    color: green;
+#output {
     display: inline-flex;
     width: 25%;
     border: 1px solid black;

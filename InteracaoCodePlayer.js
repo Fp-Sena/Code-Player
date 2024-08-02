@@ -135,20 +135,20 @@ textoJs = editorJs.getValue();
 
 var iframe = document.getElementById('iframe');
 
-iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>' + '<script>' + textoJs + '</script>';
+iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 
 editorHTML0.addEventListener('input', function(){
     textoHtml = editorHtml.getValue();
     console.log(textoHtml);
-    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>' + '<script>' + textoJs + '</script>';
+    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 })
 editorCSS0.addEventListener('input', function(){
     textoCss = editorCss.getValue();
     console.log(textoCss);
-    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>' + '<script>' + textoJs + '</script>';
+    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 })
 editorJS0.addEventListener('input', function(){
     textoJs = editorJs.getValue();
     console.log(textoJs);
-    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>' + '<script>' + textoJs + '</script>';
+    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 })
