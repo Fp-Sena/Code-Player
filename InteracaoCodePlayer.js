@@ -137,15 +137,18 @@ editorHTML0.addEventListener('input', function(){
     textoHtml = editorHtml.getValue();
     iframe.srcdoc = textoHtml;
     console.log(textoHtml);
+    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>';
 })
 editorCSS0.addEventListener('input', function(){
     textoCss = editorCss.getValue();
     iframe.style = textoCss;
     console.log(textoCss);
+    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>';
 })
 editorJS0.addEventListener('input', function(){
     textoJs = editorJs.getValue();
     console.log(textoJs);
+    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>';
 })
 
 
@@ -153,7 +156,6 @@ editorJS0.addEventListener('input', function(){
 
 var iframe = document.getElementById('iframe');
 
-iframe.srcdoc = textoHtml;
-iframe.style = textoCss;
+iframe.srcdoc = '<head><style>'+textoCss+'</style></head>' + '<body>'+textoHtml+'</body>';
 
 //----------------------------^^^^^^^^^^^^^^^^^^-----------------------------
