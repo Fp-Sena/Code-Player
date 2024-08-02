@@ -137,17 +137,17 @@ var iframe = document.getElementById('iframe');
 
 iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 
-editorHTML0.addEventListener('input', function(){
+editorHTML0.addEventListener('keyup', function(){
     textoHtml = editorHtml.getValue();
     console.log(textoHtml);
     iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 })
-editorCSS0.addEventListener('input', function(){
+editorCSS0.addEventListener('keyup', function(){
     textoCss = editorCss.getValue();
     console.log(textoCss);
     iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 })
-editorJS0.addEventListener('input', function(){
+editorJS0.addEventListener('keyup', function(){
     textoJs = editorJs.getValue();
     console.log(textoJs);
     iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
