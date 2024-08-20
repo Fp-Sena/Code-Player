@@ -16,139 +16,45 @@ var contHTML = true;
 var contCSS = true;
 var contJS = true;
 var contOutput = true;
-var contGeral = 4;
 
 var textoHtml;
 var textoCss;
 var textoJs;
 
-botoes[0].addEventListener('click', function(){
-    if(contHTML==true){
-        nomePastaHTML.style.display = "none";
-        editorHTML0.style.display = "none" 
-        contHTML=false;
-        contGeral--;
+function adicionaERemove(nomePasta, editor, contador){
+    if(contador==true){
+        nomePasta.style.display = "none";
+        editor.style.display = "none";
+        contador=false;
     }
     else{
-        nomePastaHTML.style.display = "inline-flex";
-        editorHTML0.style.display = "inline-flex";
-        contHTML=true;
-        contGeral++;
+        nomePasta.style.display = "inline-flex";
+        editor.style.display = "inline-flex";
+        contador=true;
     }
-})
-botoes[1].addEventListener('click', function(){
-    if(contCSS==true){
-        nomePastaCSS.style.display = "none";
-        editorCSS0.style.display = "none";
-        contCSS=false;
-        contGeral--;
-    }
-    else{
-        nomePastaCSS.style.display = "inline-flex";
-        editorCSS0.style.display = "inline-flex";
-        contCSS=true;
-        contGeral++;
-    }
-});
-botoes[2].addEventListener('click', function(){
-    if(contJS==true){
-        nomePastaJS.style.display = "none";
-        editorJS0.style.display = "none";
-        contJS=false;
-        contGeral--;
-    }
-    else{
-        nomePastaJS.style.display = "inline-flex";
-        editorJS0.style.display = "inline-flex";
-        contJS=true;
-        contGeral++;
-    }
-});
-botoes[3].addEventListener('click', function(){
-    if(contOutput==true){
-        nomePastaOutput.style.display = "none";
-        output.style.display = "none";
-        contOutput=false;
-        contGeral--;
-    }
-    else{
-        nomePastaOutput.style.display = "inline-flex";
-        output.style.display = "inline-flex";
-        contOutput=true;
-        contGeral++;
-    }
-})
-function PreenchendoEspacoEditores(){
-    if(contGeral==4){
-        editorHTML0.style.width = "25%";
-        editorCSS0.style.width = "25%";
-        editorJS0.style.width = "25%";
-        output.style.width = "25%";
-
-        nomePastaHTML.style.width = "25%";
-        nomePastaCSS.style.width = "25%";
-        nomePastaJS.style.width = "25%";
-        nomePastaOutput.style.width = "25%";
-    }
-    else if(contGeral==3){
-        editorHTML0.style.width = "33.33%";
-        editorCSS0.style.width = "33.33%";
-        editorJS0.style.width = "33.33%";
-        output.style.width = "33.33%";
-
-        nomePastaHTML.style.width = "33.33%";
-        nomePastaCSS.style.width = "33.33%";
-        nomePastaJS.style.width = "33.33%";
-        nomePastaOutput.style.width = "33.33%";
-    }
-    else if(contGeral==2){
-        editorHTML0.style.width = "50%";
-        editorCSS0.style.width = "50%";
-        editorJS0.style.width = "50%";
-        output.style.width = "50%";
-
-        nomePastaHTML.style.width = "50%";
-        nomePastaCSS.style.width = "50%";
-        nomePastaJS.style.width = "50%";
-        nomePastaOutput.style.width = "50%";
-    }
-    else if(contGeral==1){
-        editorHTML0.style.width = "100%";
-        editorCSS0.style.width = "100%";
-        editorJS0.style.width = "100%";
-        output.style.width = "100%";
-
-        nomePastaHTML.style.width = "100%";
-        nomePastaCSS.style.width = "100%";
-        nomePastaJS.style.width = "100%";
-        nomePastaOutput.style.width = "100%";
-    }
+    return contador;
 }
-botoes[0].addEventListener('click', PreenchendoEspacoEditores);
-botoes[1].addEventListener('click', PreenchendoEspacoEditores);
-botoes[2].addEventListener('click', PreenchendoEspacoEditores);
-botoes[3].addEventListener('click', PreenchendoEspacoEditores);
+
+botoes[0].addEventListener('click', function(){ contHTML = adicionaERemove(nomePastaHTML, editorHTML0, contHTML)});
+botoes[1].addEventListener('click', function(){ contCSS = adicionaERemove(nomePastaCSS, editorCSS0, contCSS)});
+botoes[2].addEventListener('click', function(){ contJS = adicionaERemove(nomePastaJS, editorJS0, contJS)});
+botoes[3].addEventListener('click', function(){ contOutput = adicionaERemove(nomePastaOutput, output, contOutput)});
+
+var iframe = document.getElementById('iframe');
 
 textoHtml = editorHtml.getValue();
 textoCss = editorCss.getValue();
 textoJs = editorJs.getValue();
 
-var iframe = document.getElementById('iframe');
-
 iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
 
-editorHTML0.addEventListener('keyup', function(){
+function saidaParaOutput(){
     textoHtml = editorHtml.getValue();
-    console.log(textoHtml);
-    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
-})
-editorCSS0.addEventListener('keyup', function(){
     textoCss = editorCss.getValue();
-    console.log(textoCss);
-    iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
-})
-editorJS0.addEventListener('keyup', function(){
     textoJs = editorJs.getValue();
-    console.log(textoJs);
     iframe.srcdoc = '<head><style>'+textoCss+'</style></head>'+'<body>'+textoHtml+'</body>'+'<script>'+textoJs+'</script>';
-})
+}
+
+editorHTML0.addEventListener('keyup', saidaParaOutput);
+editorCSS0.addEventListener('keyup', saidaParaOutput);
+editorJS0.addEventListener('keyup', saidaParaOutput);

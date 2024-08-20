@@ -50,8 +50,7 @@ body{
 .nomePasta {
     background-color: rgb(73, 73, 73);
     display: inline-flex;
-    flex-direction: row;
-    width: 25%;
+    flex: 1;
     font-size: 14px;
     justify-content: center;
     color: darkgray;
@@ -63,24 +62,20 @@ body{
 }
 #editorHTML { 
     font-size: 14px;
-    display: inline-flex;
-    width: 25%;
     border: 1px solid black;
+    flex: 1;
 }
 #editorCSS { 
     font-size: 14px;
-    display: inline-flex;
-    width: 25%;
     border: 1px solid black;
+    flex: 1;
 }
 #editorJS { 
     font-size: 14px;
-    display: inline-flex;
-    width: 25%;
     border: 1px solid black;
+    flex: 1;
 }
 #output {
-    display: inline-flex;
-    width: 25%;
     border: 1px solid black;
+    flex: 1;
 }
